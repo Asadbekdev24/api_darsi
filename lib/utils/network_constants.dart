@@ -3,7 +3,7 @@
 class NetworkConstants {
   static const BASE_URL = "https://icecream.birnima.uz/api";
 
-  static const POSTS_URL = "$BASE_URL/flavours";
+  static const FLAVOURS_URL = "$BASE_URL/flavours";
 
   static const DELETE_URL = "$BASE_URL/flavours";
 }
