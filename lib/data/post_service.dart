@@ -33,6 +33,31 @@ class PostService {
         "Postlarni olishda xatolik yuz berdi, iltimos qaytadan urinib ko'ring.\nSizda ayb yo'q bizda ayb.");
   }
 
+
+ Future<bool> addPost({
+  required String name,
+}) async {
+  final url = Uri.parse(NetworkConstants.ADD_URL);
+  final newPost = {"name": name};
+
+  final response = await http.post(
+    url,
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: jsonEncode(newPost),
+  );
+
+  log(response.statusCode.toString());
+  log(response.body);
+
+  if (response.statusCode == 201 || response.statusCode == 200) {
+    return true;
+  }
+  return false;
+}
+
+
   Future<bool> updatePost({
     required String id,
     required String name,

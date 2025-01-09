@@ -1,3 +1,5 @@
+import 'package:api_darsi/data/post_service.dart';
+import 'package:api_darsi/screens/add_post.dart';
 import 'package:api_darsi/screens/flavours_screen.dart';
 import 'package:api_darsi/screens/posts_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: FlavoursScreen(),
+      home: AddPost(postService: PostService(),),
     );
   }
 }

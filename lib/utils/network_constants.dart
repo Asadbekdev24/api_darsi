@@ -6,4 +6,7 @@ class NetworkConstants {
   static const FLAVOURS_URL = "$BASE_URL/flavours";
 
   static const DELETE_URL = "$BASE_URL/flavours";
-}
+
+  static const ADD_URL="$BASE_URL/flavours";
+
+  }
